@@ -34,4 +34,16 @@ Creates an error message on the stringified field if:
 
 TODO expand doco
 
+Credits
+=======
+
+Ryan Bates for the original idea in his screencast "Making a plugin" 
+http://railscasts.com/episodes/33-making-a-plugin
+
+Radio New Zealand who gave back to the community
+http://www.radionz.co.nz
+
+Able Technology for sponsoring further enhancements and testing
+http://www.abletech.co.nz
+
 Copyright (c) 2008 Nigel Ramsay, released under the MIT license
