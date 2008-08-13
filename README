@@ -1,13 +1,37 @@
 StringifyDate
 =============
 
-Introduction goes here.
+Note: work in progress
+
+Rails plugin to define a get and set method for dates using your own format. 
+
+Simple example
+==============
+
+class Person < ActiveRecord::Base
+  stringify_date :born_on, :format => :nz_format
+end
+
+Creates two methods called 'born_on_string' and 'born_on_string=' which will create, and parse date strings using the 'nz_format' as specified in ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS. This is often declared in your application.rb file.
+
+Complex example
+===============
+
+class Person < ActiveRecord::Base
+  stringify_date :born_on, :format => :nz_format, 
+                 :stringified_name => 'birth_date', :required => true, 
+                 :required_message => 'is a mandatory field',
+                 :invalid_message => 'should be in the format DD/MM/YYYY'
+end
 
 
-Example
-=======
+Error handling
+==============
 
-Example goes here.
+Creates an error message on the stringified field if:
+  - string does not parse (ie: invalid format supplied)
+  - required was true, but not supplied
 
+TODO expand doco
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 Nigel Ramsay, released under the MIT license

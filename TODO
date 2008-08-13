@@ -1,0 +1,4 @@
+1. Add unit tests
+2. Ensure error handling is standard, and works with custom-err-msg plugin
+3. Allow :format to supply either a symbol reference, or string containing format
+4. Write uninstaller
